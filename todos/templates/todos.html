@@ -1,0 +1,20 @@
+{% load static %}
+
+<html>
+    <head>
+        <link rel='stylesheet' href="{% static 'static/base.css' %}">
+    </head>
+    <body>
+        {% block content%}
+            <h1>Todo Items</h1>
+            <hr>
+            <ul>
+                {% for item in todos %}
+                    <li>
+                        <span>{{ item.title }}:</span> {% if item.completed %}<span id="completed">Completed</span>{% else %}<span id="no_completed">Not Completed</span>{% endif %}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endblock content%}
+    </body>
+</html>

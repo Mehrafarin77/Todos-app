@@ -1,0 +1,15 @@
+span{
+    font-size: 20px;
+}
+
+span#completed{
+    color: green;
+}
+
+span#not_completed{
+    color: red;
+}
+
+li{
+    list-style: decimal;
+}
